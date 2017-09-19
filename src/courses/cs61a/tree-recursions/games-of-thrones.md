@@ -1,5 +1,5 @@
 
-### Game of Thrones *(su16-mt-7)*
+{.#} Game of Thrones *(su16-mt-7)*
 
 This question uses the following tree data abstraction.
 

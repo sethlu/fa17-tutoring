@@ -1,5 +1,5 @@
 
-### You Complete Me *(sp15-mt1-3)*
+{.#} You Complete Me *(sp15-mt1-3)*
 
 1. Implement the combine function, which takes a non-negative integer n, a two-argument function f, and a number result. It applies f to the first digit of n and the result of combining the rest of the digits of n by repeatedly applying f (see the doctests). If n has no digits (because it is zero), combine returns result.
 

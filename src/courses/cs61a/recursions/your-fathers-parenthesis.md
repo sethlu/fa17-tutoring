@@ -1,5 +1,5 @@
 
-### Your Father's Parentheses *(sp16-mt1-1)*
+{.#} Your Father's Parentheses *(sp16-mt1-1)*
 
 Suppose we have a sequence of quantities that we want to multiply together, but can only multiply two at a time. We can express the various ways of doing so by counting the number of different ways to parenthesize the sequence. For example, here are the possibilities for products of 1, 2, 3 and 4 elements:
 

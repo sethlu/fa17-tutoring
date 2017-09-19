@@ -1,5 +1,5 @@
 
-### Digit Fidget *(fa15-mt1-3)*
+{.#} Digit Fidget *(fa15-mt1-3)*
 
 **IMPORTANT DEFINITION** Each digit in a non-negative integer `n` has a digit position. Digit positions begin at `0` and count from the right-most digit of `n`. For example, in `568789`, the digit `9` is at position `0` and digit `7` is at position `2`. The digit `8` appears at both positions `1` and `3`.
 

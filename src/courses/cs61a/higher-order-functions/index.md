@@ -1,4 +1,7 @@
 
-# Higher Order Functions
+{.#} Higher Order Functions
+{.#+}
 
 {.include digit-fidget.md}
+
+{.#-}

@@ -1,5 +1,5 @@
 
-### Environmental Policy *(sp16-mt1-2)*
+{.#} Environmental Policy *(sp16-mt1-2)*
 
 Fill in the environment diagram that results from executing the code below until the entire program is finished, an error occurs, or all frames are filled. *You may not need to use all of the spaces or frames.*
 A complete answer will:

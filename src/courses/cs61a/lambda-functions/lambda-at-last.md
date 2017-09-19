@@ -1,5 +1,5 @@
 
-### Lambda at Last *(fa14-mt1-4)*
+{.#} Lambda at Last *(fa14-mt1-4)*
 
 1. Fill in the blank below with an expression so that the second line evaluates to 2014. **You may only use the names `two_thousand`, `two`, `k`, `four`, and `teen` and parentheses in your expression (no numbers, operators, etc.)**
 

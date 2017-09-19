@@ -1,5 +1,5 @@
 
-### Zombies! *(fa15-mt1-4)*
+{.#} Zombies! *(fa15-mt1-4)*
 
 **IMPORTANT** In this question, assume that all of `f`, `g`, and `h` are functions that take one non-negative integer argument and return a non-negative integer. You do not need to consider negative or fractional numbers.
 

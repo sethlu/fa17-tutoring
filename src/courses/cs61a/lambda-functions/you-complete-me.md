@@ -1,5 +1,5 @@
 
-### You Complete Me *(sp15-mt1-3)*
+{.#} You Complete Me *(sp15-mt1-3)*
 
 Add parentheses and single-digit integers in the blanks below so that the expression on the second line evaluates to `2015`. You may only add parentheses and single-digit integers. You may leave some blanks empty.
 
