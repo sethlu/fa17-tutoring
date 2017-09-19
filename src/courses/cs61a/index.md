@@ -1,6 +1,6 @@
 
 {.#} CS 61A
-{.#+}
+{.#++}
 
 {.#} {.link higher-order-functions/index.md | Higher Order Functions}
 
@@ -18,4 +18,4 @@ Higher order functions, but with `lambda`s.
 
 Disambiguation: Actual recursions on abstract trees.
 
-{.#-}
+{.#--}

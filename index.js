@@ -74,14 +74,19 @@ let build = (function () {
 
     let headinglevel = 1;
 
+    function makeHeading(headinglevel, heading) {
+      return headinglevel >= 1 && headinglevel <= 6
+        ? ("#".repeat(headinglevel) + (heading ? ` ${heading}` : ""))
+        : "";
+    }
+
     text = text.replace(regexHeading, function (match, op, heading) {
       switch (op) {
-        case "+": ++headinglevel; break;
-        case "-": --headinglevel; break;
-        default:
-          return headinglevel >= 1 && headinglevel <= 6
-            ? ("#".repeat(headinglevel) + (heading ? ` ${heading}` : ""))
-            : "";
+        case "++": ++headinglevel; break;
+        case "--": --headinglevel; break;
+        case "+": return makeHeading(headinglevel + 1, heading);
+        case "-": return makeHeading(headinglevel - 1, heading);
+        default: return makeHeading(headinglevel, heading);
       }
       return "";
     });

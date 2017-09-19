@@ -1,6 +1,6 @@
 
 {.#} Lambda Functions
-{.#+}
+{.#++}
 
 {.include lambda-at-last.md}
 
@@ -8,4 +8,4 @@
 
 {.include multikarp.md}
 
-{.#-}
+{.#--}
