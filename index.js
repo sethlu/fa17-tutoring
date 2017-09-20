@@ -8,8 +8,8 @@ const showdownHighlight = require("showdown-highlight");
 const replaceExt = require("replace-ext");
 
 // Regex's
-let regexLink = /{\.link\s+([^|]*)(?:\s+\|\s+(.*))?\s*}/g;
-let regexInclude = /{\.include\s+(.*)\s*}/g;
+let regexLink = /{\.link\s+([^|]*)(?:\s+\|\s+([^}]*))?\s*}/g;
+let regexInclude = /{\.include\s+([^}]*)\s*}/g;
 let regexHeading = /{\.#([^}]*)\s*([^}]*)\s*}/g;
 
 // Preprocessor to expand all file includes and resolve relative links
@@ -56,6 +56,19 @@ let build = (function () {
   function build(entry) {
     console.log("Building", entry);
 
+    if (path.extname(entry) !== ".md") {
+      // Only convert Markdown documents
+
+      let filepath = path.join("dist", path.relative("src", entry));
+      let filedir = path.dirname(filepath);
+
+      fs.ensureDirSync(filedir);
+
+      fs.copySync(entry, filepath);
+
+      return filepath;
+    }
+
     // Avoid building a same entry twice
     if (builds.has(entry)) {
       console.log("Skipping", entry, "already built");
@@ -67,7 +80,14 @@ let build = (function () {
     // Preprocess the text
     // Build & link related documents
 
+    // Input dir
     let dir = path.dirname(entry);
+
+    // Output path & dir
+    let filepath = path.join("dist", path.relative("src", replaceExt(entry, ".html")));
+    let filedir = path.dirname(filepath)
+
+    // Input text
     let text = preprocess(entry);
 
     // Headings
@@ -93,13 +113,13 @@ let build = (function () {
 
     // Links
 
-    text = text.replace(regexLink, function(match, filepath, name) {
+    text = text.replace(regexLink, function(match, entry, name) {
 
-      let html = build(filepath);
+      let linkedfilepath = build(entry);
 
-      console.log("Linking", path.join(dir, filepath));
+      console.log("Linking");
 
-      let url = path.relative(dir, replaceExt(filepath, ".html"));
+      let url = path.relative(filedir, linkedfilepath);
 
       return `[${name || url}](${url})`;
     });
@@ -109,9 +129,6 @@ let build = (function () {
     let html = converter.makeHtml(text);
 
     // Save the generated HTML
-
-    let filepath = path.join("dist", path.relative("src", replaceExt(entry, ".html")));
-    let filedir = path.dirname(filepath)
 
     fs.ensureDirSync(filedir);
 
@@ -131,6 +148,7 @@ let build = (function () {
         </body>
       </html>`);
 
+    return filepath;
   }
 
   return build;
