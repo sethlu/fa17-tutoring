@@ -34,6 +34,7 @@ pre {
   background-color: #f6f6f6;
   border-radius: 3px;
   overflow-x: auto;
+  line-height: 1.2;
 }
 
 pre code {
