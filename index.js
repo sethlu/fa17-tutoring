@@ -119,7 +119,14 @@ let build = (function () {
 
       console.log("Linking");
 
-      let url = path.relative(filedir, linkedfilepath);
+      let url = path.relative(
+        filedir,
+        path.extname(linkedfilepath) === ".html"
+          ? path.basename(linkedfilepath, ".html") === "index"
+            ? path.dirname(linkedfilepath)                      // Avoid index.html
+            : replaceExt(linkedfilepath, "")                    // Avoid .html file extension
+          : linkedfilepath
+      );
 
       return `[${name || url}](${url})`;
     });
