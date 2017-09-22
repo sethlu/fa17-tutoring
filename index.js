@@ -144,7 +144,7 @@ let build = (function () {
           <footer>
             <p>This page was last generated on ${new Date().toString()}</p>
             <p><a href="https://mintkit.net" target="_blank">Zhuo Lu</a> © 2017</p>
-          <footer>
+          </footer>
         </body>
       </html>`);
 
