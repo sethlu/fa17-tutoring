@@ -63,3 +63,21 @@ h3 {
   font-size: 1.2em;
   margin: 1em 0;
 }
+
+.horizontal-sections {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.5em -1em 0.5em 0;
+}
+
+.horizontal-sections > * {
+  flex: 0 1 auto;
+  box-sizing: border-box;
+  margin: 0 1em 1em 0;
+  padding: 0 2.5em 0.5em 1.5em;
+  width: 392px;
+  min-width: 340px;
+  border: solid 1px #ddd;
+  border-radius: 3px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.02);
+}
