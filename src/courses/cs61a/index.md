@@ -30,7 +30,7 @@ Time: Wed 12/13/17 3-6pm
   </div>
 </div>
 
-{.#} Topical Practice
+{.#} Topics
 
 {.#++}
 
