@@ -9,7 +9,7 @@
 
 {.#+} Midterm 1
 
-{.link resources/61a-fa17-mt1.pdf | Exam Paper} & {.link resources/61a-fa17-mt1-solution.pdf | Solution}
+Fall 17 {.link resources/61a-fa17-mt1.pdf | Exam Paper} & {.link resources/61a-fa17-mt1-solution.pdf | Solution}
 
   </div>
 </div>
