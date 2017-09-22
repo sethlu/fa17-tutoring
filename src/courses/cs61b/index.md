@@ -4,7 +4,7 @@
 
 {.#} Course Materials
 
-<div data-markdown class="horizontal-sections">
+<div data-markdown class="cards">
   <div data-markdown>
 
 {.#+} Midterm 1
@@ -31,7 +31,7 @@ Time: Mon 12/11/17 7-10pm
 {.#} Topics
 {.#++}
 
-<div data-markdown class="horizontal-sections">
+<div data-markdown class="cards">
   <div data-markdown>
 
 {.#} Arrays

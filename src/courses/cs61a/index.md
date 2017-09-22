@@ -4,7 +4,7 @@
 
 {.#} Course Materials
 
-<div data-markdown class="horizontal-sections">
+<div data-markdown class="cards">
   <div data-markdown>
 
 {.#+} Midterm 1
@@ -34,7 +34,7 @@ Time: Wed 12/13/17 3-6pm
 
 {.#++}
 
-<div data-markdown class="horizontal-sections">
+<div data-markdown class="cards">
   <div data-markdown>
 
 {.#} {.link topics/higher-order-functions/index.md | Higher Order Functions}
