@@ -1,4 +1,9 @@
 
-{.include courses/cs61a/index.md}
+{.#} Fall 2017 Tutoring
+{.#++}
 
-{.include courses/cs61b/index.md}
+{.#} {.link courses/cs61a/index.md | CS 61A: Structure and Interpretation of Computer Programs}
+
+{.#} {.link courses/cs61b/index.md | CS 61B: Data Structures}
+
+{.#--}
