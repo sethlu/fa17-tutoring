@@ -1,8 +1,10 @@
 
-{.#} CS 61A
+{.#} CS 61A: Structure and Interpretation of Computer Programs
 {.#++}
 
 {.#} Course Materials
+
+[Website](https://cs61a.org)
 
 <div data-markdown class="cards">
   <div data-markdown>

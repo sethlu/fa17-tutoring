@@ -1,8 +1,10 @@
 
-{.#} CS 61B
+{.#} CS 61B: Data Structures
 {.#++}
 
 {.#} Course Materials
+
+[Website](https://inst.eecs.berkeley.edu/~cs61b/fa17/)
 
 <div data-markdown class="cards">
   <div data-markdown>
