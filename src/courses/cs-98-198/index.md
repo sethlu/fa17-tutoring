@@ -16,7 +16,7 @@ Jotting down things on a web page.
   </div>
   <div data-markdown>
 
-{.#} Box Model
+{.#} {.link topics/box-model/index.md | Box Model}
 
 Don't take <q>boxes</q> literally cuz they are more than rectangles.
 
