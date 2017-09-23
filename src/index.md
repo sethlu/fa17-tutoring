@@ -8,6 +8,6 @@
 {.#} {.link courses/cs-61b/index.md | CS 61B: Data Structures}
 {.#++} {.include courses/cs-61b/course-info.md} {.#--}
 
-{.#} {.link courses/cs-98-198/index.md | CS 98/198: Web Design DeCal}
+{.#} {.link courses/cs-98-198/index.md | CS 98/198: Web&nbsp;Design&nbsp;DeCal}
 
 {.#--}
