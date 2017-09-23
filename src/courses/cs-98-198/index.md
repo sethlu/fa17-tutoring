@@ -1,5 +1,5 @@
 
-{.#} CS 98/198: Web&nbsp;Design&nbsp;Decal
+{.#} CS 98/198: Web&nbsp;Design&nbsp;DeCal
 {.#++}
 
 {.#} Topics
