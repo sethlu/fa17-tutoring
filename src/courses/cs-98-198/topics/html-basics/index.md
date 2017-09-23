@@ -91,7 +91,7 @@ Attributes can be specified in four different ways:
 
 {.#} References
 
-- W3C: [HTML 5.2 § 8.1.2 Elements](https://www.w3.org/TR/html52/syntax.html#writing-html-documents-elements)
+- W3C: [HTML 5.2 § 8.1.2. Elements](https://www.w3.org/TR/html52/syntax.html#writing-html-documents-elements)
 
 {.#--}
 
