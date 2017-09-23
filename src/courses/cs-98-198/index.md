@@ -23,7 +23,7 @@ Don't take <q>boxes</q> literally cuz they are more than rectangles.
   </div>
   <div data-markdown>
 
-{.#} Positioning
+{.#} {.link topics/positioning/index.md | Positioning}
 
 Where do you put some box in a box that's in another box. Feeling like saying <q>Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo.</q>
 
