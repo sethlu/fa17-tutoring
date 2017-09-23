@@ -4,14 +4,14 @@
 This question uses the following tree data abstraction.
 
 ```py
->>> def tree(entry, children=[]):
-...   return [entry, children]
-...
->>> def entry(tree):
-...   return tree[0]
-...
->>> def children(tree):
-...   return tree[1]
+def tree(entry, children=[]):
+  return [entry, children]
+
+def entry(tree):
+  return tree[0]
+
+def children(tree):
+  return tree[1]
 ```
 
 1. Define the function `track_lineage` that takes in a tree of strings `family_tree` and a string `name`. Assume that there is a unique node with entry `name`. `track_lineage` returns a list with the entries of the parent and grandparent of that node. If the node with entry name does not have a parent or grandparent, return `None` for that element in the list. See the doctests for details. **Do not violate abstraction barriers. You may only use the lines provided. You may not need to fill all the lines.**
