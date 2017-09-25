@@ -66,6 +66,15 @@ p {
   margin: 1.5em 0;
 }
 
+blockquote {
+  margin: 1.5em 0;
+  padding: 0 1.5em 0 calc(1.5em - 3px);
+  border-left: solid 3px #ccc;
+  background-color: #fbfbfb;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
