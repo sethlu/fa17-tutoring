@@ -75,6 +75,15 @@ blockquote {
   overflow: hidden;
 }
 
+details {
+  padding: 0 1.5em;
+}
+
+details > summary {
+  outline: none;
+  cursor: default;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
