@@ -8,4 +8,6 @@
 
 {.include your-fathers-parenthesis.md}
 
+{.include towers-of-hanoi.md}
+
 {.#--}
