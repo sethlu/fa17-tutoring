@@ -143,7 +143,7 @@ let build = (function () {
       <html>
         <head>
           <meta charset="utf-8">
-          <meta name="viewport" content="width=viewport-width, initial-scale=1">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
           <title>Fall 2017 Tutoring</title>
           <link rel="stylesheet" type="text/css" href="${path.relative(filedir, "dist") || "."}/assets/styles/main.css">
         </head>
