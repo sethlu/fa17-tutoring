@@ -19,15 +19,16 @@ footer {
 
 code {
   font-family: "Source Code Pro", monospace;
-  background-color: #f6f6f6;
+  background-color: #fafafa;
   padding: 0.125em 0.25em;
   border-radius: 3px;
 }
 
 pre {
-  padding: 1.5em;
-  background-color: #f8f8f8;
-  border-radius: 3px;
+  margin: 1.5em 0;
+  padding: 1.5em 2em 1.5em calc(2em - 3px);
+  border-left: solid 3px #3b7ea1;
+  background-color: #fafafa;
   overflow-x: auto;
   line-height: 1.25;
 }
@@ -48,18 +49,21 @@ h1 {
   font-size: 2em;
   margin: 1.25em 0;
   line-height: 1.25;
+  color: #3b7ea1;
 }
 
 h2 {
   font-size: 1.5em;
   margin: 1.25em 0;
   line-height: 1.25;
+  color: #46535e;
 }
 
 h3 {
   font-size: 1.2em;
   margin: 1.25em 0;
   line-height: 1.25;
+  color: #46535e;
 }
 
 p {
@@ -68,10 +72,8 @@ p {
 
 blockquote {
   margin: 1.5em 0;
-  padding: 0 1.5em 0 calc(1.5em - 3px);
-  border-left: solid 3px #ccc;
-  background-color: #fbfbfb;
-  border-radius: 3px;
+  padding: 0 2em 0 calc(2em - 3px);
+  border-left: solid 3px #ddd5c7;
   overflow: hidden;
 }
 
