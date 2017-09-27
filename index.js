@@ -21,7 +21,15 @@ let preprocess = (function () {
     filestack.push(entry);
 
     let dir = path.dirname(entry);
-    let text = fs.readFileSync(entry, "utf8");
+    let text;
+
+    switch (path.extname(entry)) {
+      case ".js":
+        text = require("./" + path.join(path.dirname(entry), path.basename(entry, ".js")))();
+        break;
+      default:
+        text = fs.readFileSync(entry, "utf8");
+    }
 
     text = text.replace(regexLink, function (match, filepath, name) {
       return `{.link ${path.join(dir, filepath)}${name ? ` | ${name}` : ""}}`;
@@ -38,6 +46,8 @@ let preprocess = (function () {
     filestack.pop();
     return text;
   }
+
+  preprocess.supportedExt = [".md", ".js"];
 
   return preprocess;
 })();
@@ -56,8 +66,8 @@ let build = (function () {
   function build(entry) {
     console.log("Building", entry);
 
-    if (path.extname(entry) !== ".md") {
-      // Only convert Markdown documents
+    if (preprocess.supportedExt.indexOf(path.extname(entry).toLowerCase()) < 0) {
+      // Only preprocess & convert supported files
 
       let filepath = path.join("dist", path.relative("src", entry));
       let filedir = path.dirname(filepath);
@@ -163,7 +173,7 @@ let build = (function () {
 })();
 
 // Website entries
-let entries = ["src/index.md"].concat(fs.readdirSync("src/compilations").map(file => path.join("src/compilations", file)));
+let entries = ["src/index.md"];
 
 // Build each Markdown entry
 entries.forEach(build);
