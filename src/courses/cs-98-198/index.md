@@ -2,6 +2,10 @@
 {.#} CS 98/198: Web&nbsp;Design&nbsp;DeCal
 {.#++}
 
+{.#} Course Info
+
+{.include course-info.md}
+
 {.#} Topics
 
 {.#++}
