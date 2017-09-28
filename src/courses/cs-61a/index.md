@@ -13,6 +13,13 @@
 <div data-markdown class="cards">
   <div data-markdown>
 
+{.#} {.link topics/environment-diagrams/index.md | Environment Diagrams}
+
+Frame, parent frame, grandparent frame and possible great grandparent frame... You know it.
+
+  </div>
+  <div data-markdown>
+
 {.#} {.link topics/higher-order-functions/index.md | Higher Order Functions}
 
 Flying with first-class but functions.
