@@ -32,6 +32,13 @@ Don't take <q>boxes</q> literally cuz they are more than rectangles.
 Where do you put some box in a box that's in another box. Feeling like saying <q>Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo.</q>
 
   </div>
+  <div data-markdown>
+
+{.#} {.link topics/display/index.md | Display}
+
+There is a little more than `display: none` for hiding elements.
+
+  </div>
 </div>
 
 {.#--}
