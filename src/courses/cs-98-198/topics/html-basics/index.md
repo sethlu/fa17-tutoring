@@ -5,7 +5,7 @@
 {.#} Extended Notes
 {.#++}
 
-HTML is not crazily complicated compared to other <q>languages</q>; if you're interested to embrace a complete view of HTML 5, feel free to check out [HTML 5.2 specs](https://www.w3.org/TR/html52/).
+HTML is not crazily complicated compared to other <q>languages</q>; if you're interested to embrace a complete view of HTML 5, feel free to check out [HTML 5.2](https://www.w3.org/TR/html52/) (Candidate Recommendation).
 
 {.#} Hypertext Markup Language
 
@@ -91,7 +91,7 @@ Attributes can be specified in four different ways:
 
 {.#} References
 
-- W3C: [HTML 5.2 § 8.1.2. Elements](https://www.w3.org/TR/html52/syntax.html#writing-html-documents-elements)
+- W3C: [HTML 5 § 8.1.2. Elements](https://www.w3.org/TR/html5/syntax.html#elements-0)
 
 {.#--}
 
