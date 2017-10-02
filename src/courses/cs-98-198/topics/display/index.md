@@ -12,7 +12,7 @@ There are a lot more than `block`, `inline` and `none` for displaying elements.
 
 To be more precise with the language and to explore the full tailoring of content arrangement, some keywords are designed to describe where the elements sit in a flow layout, and some are designed to describe a context in which the child elements should be arranged.
 
-For example, `block` and `inline` (default) are *display-outside* values setting whether the element should start a new chunk, or continue to run in a same line (cna be broken into multiple lines too). Note that these *display-outside* values are more meaningful in a *flow* layout context (see in the next paragraph).
+For example, `block` and `inline` (default) are *display-outside* values setting whether the element should start a new chunk, or continue to run in a same line (can be broken into multiple lines too). Note that these *display-outside* values are more meaningful in a *flow* layout context (see in the next paragraph).
 
 Additionally, `flow` (default), `flex`, `grid` are *display-inside* values that decide the layout context for the contained elements. `flow` layout is generic and the child elements with `block` and `inline` *display-outside* values can alter the flow of the content, but `flow` is not the only layout context available out there.
 
