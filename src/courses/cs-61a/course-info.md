@@ -6,7 +6,7 @@ Website: https://cs61a.org
 
 {.#+} Midterm 1
 
-Time: Thu 9/14/17 8-10pm
+Time: Thu 9/14/17 8-10 pm
 
 {.link resources/61a-fa17-mt1.pdf | Exam Paper} & {.link resources/61a-fa17-mt1-solution.pdf | Solution}
 
@@ -15,14 +15,14 @@ Time: Thu 9/14/17 8-10pm
 
 {.#+} Midterm 2
 
-Time: Thu 10/19/17 8-10pm
+Time: Thu 10/19/17 8-10 pm
 
   </div>
   <div data-markdown>
 
 {.#+} Final Exam
 
-Time: Wed 12/13/17 3-6pm
+Time: Wed 12/13/17 3-6 pm
 
   </div>
 </div>
