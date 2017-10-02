@@ -58,6 +58,12 @@ let converter = new showdown.Converter({
 });
 converter.setFlavor("github");
 
+// Timestamp
+function getTimestamp() {
+  let date = new Date();
+  return `${[date.getMonth() + 1, date.getDate(), date.getFullYear() - 2000].join("/")} ${[date.getHours() - 12, date.getMinutes()].join(":")} pm`;
+}
+
 // Function to build a Markdown file
 let build = (function () {
 
@@ -160,7 +166,7 @@ let build = (function () {
         <body>
           ${html}
           <footer>
-            <p>This page was last generated on ${new Date().toString()}.<br>If you think you've found a bug, please <a href="https://github.com/sethlu/fa17-tutoring/issues" target="_blank">report it on GitHub</a>, thanks!</p>
+            <p>This page was last generated on ${getTimestamp()}.<br>If you think you've found a bug, please <a href="https://github.com/sethlu/fa17-tutoring/issues" target="_blank">report it on GitHub</a>, thanks!</p>
             <p><a href="https://mintkit.net" target="_blank">Zhuo Lu</a> © 2017</p>
           </footer>
         </body>
@@ -182,4 +188,4 @@ entries.forEach(build);
 fs.copySync("src/assets", "dist/assets");
 fs.copySync("node_modules/highlight.js/styles/atom-one-light.css", "dist/assets/styles/atom-one-light.css");
 
-console.log(`Built: ${new Date().toString()}`);
+console.log(`Built: ${getTimestamp()}`);
