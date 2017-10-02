@@ -7,6 +7,27 @@ const showdown = require("showdown");
 const showdownHighlight = require("showdown-highlight");
 const replaceExt = require("replace-ext");
 
+// Polyfill
+
+// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
+if (!String.prototype.padStart) {
+  String.prototype.padStart = function padStart(targetLength,padString) {
+    targetLength = targetLength>>0; //floor if number or convert non-number to 0;
+    padString = String(padString || ' ');
+    if (this.length > targetLength) {
+      return String(this);
+    }
+    else {
+      targetLength = targetLength-this.length;
+      if (targetLength > padString.length) {
+        padString += padString.repeat(targetLength/padString.length); //append to original to ensure we are longer than needed
+      }
+      return padString.slice(0,targetLength) + String(this);
+    }
+  };
+}
+
 // Regex's
 let regexLink = /{\.link\s+([^|]*)(?:\s+\|\s+([^}]*))?\s*}/g;
 let regexInclude = /{\.include\s+([^}]*)\s*}/g;
@@ -61,7 +82,7 @@ converter.setFlavor("github");
 // Timestamp
 function getTimestamp() {
   let date = new Date();
-  return `${[date.getMonth() + 1, date.getDate(), date.getFullYear() - 2000].join("/")} ${[date.getHours() - 12, date.getMinutes()].join(":")} pm`;
+  return `${[date.getMonth() + 1, date.getDate(), date.getFullYear() - 2000].join("/")} ${[date.getHours() - 12, date.getMinutes().toString().padStart(2, "0")].join(":")} pm`;
 }
 
 // Function to build a Markdown file
