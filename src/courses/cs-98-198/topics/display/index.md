@@ -22,9 +22,13 @@ Now what about `none`? It goes in a *display-box* category and nothing in the el
 
 For more `display` values, check out the references.
 
+<!--
 {.#} Flex Layout
 
-TBD: [CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/)
+TODO
+- CSS Flexible Box Layout: https://www.w3.org/TR/css-flexbox-1/
+
+-->
 
 {.#} References:
 
