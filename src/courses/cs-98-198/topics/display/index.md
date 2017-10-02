@@ -16,7 +16,7 @@ For example, `block` and `inline` (default) are *display-outside* values setting
 
 Additionally, `flow` (default), `flex`, `grid` are *display-inside* values that decide the layout context for the contained elements. `flow` layout is generic and the child elements with `block` and `inline` *display-outside* values can alter the flow of the content, but `flow` is not the only layout context available out there.
 
-With these two types of values, we can combine them to make `display: block flow`. However, usually we just say `display: block` and the *display-inside* will be default to `flow`. Alternatively, if we want `display: block flex`, using `display: flex` will have `block` by default nearly at all times.
+With these two types of values, we can combine them to make `display: block flow` *(experimental, doesn't yet work)*. However, usually we just say `display: block` and the *display-inside* will be default to `flow`. Alternatively, if we want `display: block flex`, using `display: flex` will have `block` by default nearly at all times.
 
 Now what about `none`? It goes in a *display-box* category and nothing in the element nor the element itself will be considered in the page rendering.
 
