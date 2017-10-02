@@ -8,6 +8,8 @@ Website: https://inst.eecs.berkeley.edu/~cs-61b/fa17/
 
 Time: Wed 9/27/17 8-10 pm
 
+{.link resources/61b-fa17-mt1-solution.pdf | Solution}
+
   </div>
   <div data-markdown>
 
