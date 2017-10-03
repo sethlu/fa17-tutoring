@@ -46,6 +46,13 @@ Higher order functions, but with `lambda`s.
 Disambiguation: Actual recursions on abstract tree structures.
 
   </div>
+  <div data-markdown>
+
+{.#} {.link topics/asymptotics/index.md | Asymptotic Analysis}
+
+Wait, you say your program *runs*? Well, how fast?
+
+  </div>
 </div>
 
 {.#--}
