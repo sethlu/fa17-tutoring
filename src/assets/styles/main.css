@@ -66,6 +66,13 @@ h3 {
   color: #46535e;
 }
 
+h4 {
+  font-size: 1em;
+  margin: 1.5em 0;
+  line-height: 1.25;
+  color: #46535e;
+}
+
 p {
   margin: 1.5em 0;
 }
