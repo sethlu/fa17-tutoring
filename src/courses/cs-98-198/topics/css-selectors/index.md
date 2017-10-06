@@ -49,7 +49,6 @@ Combinators are great tools to create complex CSS styles, otherwise most things 
         <p>...</p>
       </section>
     </article>
-
     <p>...</p><!-- This will look different from the <p> above -->
     ```
 
@@ -102,9 +101,9 @@ Combinators are great tools to create complex CSS styles, otherwise most things 
 
     ```html
     <style type="text/css">
-    p ~ span {
-      font-style: italic;
-    }
+      p ~ span {
+        font-style: italic;
+      }
     </style>
 
     <span>...</span><!-- The font is not italicized -->
