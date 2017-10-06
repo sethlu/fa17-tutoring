@@ -39,6 +39,13 @@ Where do you put some box in a box that's in another box. Feeling like saying <q
 There is a little more than `display: none` for hiding elements.
 
   </div>
+  <div data-markdown>
+
+{.#} {.link topics/css-selectors/index.md | CSS Selectors}
+
+Scripting with selectors! We don't need JavaScript for cool stuff. :D
+
+  </div>
 </div>
 
 {.#--}
