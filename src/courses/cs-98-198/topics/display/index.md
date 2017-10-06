@@ -2,6 +2,9 @@
 {.#} Display
 {.#++}
 
+{.#} Extended Notes
+{.#++}
+
 Web browsers take cares of laying a foundation for a webpage--though a lot of the times we tend to normalize/reset the CSS styles due to inconsistencies among the palettes default to different browsers. Some elements are default to be arranged in certain manners: Very often we see `<div>` occupying a whole block by itself, nothing else sharing a same row. Some other times we find text flowing and wrapping at the end of lines, inline with photos.
 
 So far we have seen `block` and `inline`. While all elements are default to `display: inline` in XML, meaning that the contents run in lines unless breaking at line ends. [HTML 5](https://www.w3.org/TR/html5/rendering.html#rendering) defines some of the many basic properties, and browsers each deploy their default looks, for instance [WebKit/Chrome](https://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css). Though at times some inline elements may have widths and heights (an example being the replaced element `<img>`), generally all inline elements cannot have their dimensions set; their sizes are calculated based on the fonts (family, size etc.)--technically speaking, replaced elements like `<img>` can behave differently from non-replaced elements, and replaced elements may not necessarily follow `width` and `height` settings.
@@ -35,5 +38,7 @@ TODO
 - MaxDesign: [Inline elements and padding](http://maxdesign.com.au/articles/inline/)
 - MDN: [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 - W3C: [CSS Display Module Level 3](https://www.w3.org/TR/css-display-3/#the-display-properties)
+
+{.#--}
 
 {.#--}
