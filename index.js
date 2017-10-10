@@ -82,7 +82,7 @@ converter.setFlavor("github");
 // Timestamp
 function getTimestamp() {
   let date = new Date();
-  return `${[date.getMonth() + 1, date.getDate(), date.getFullYear() - 2000].join("/")} ${[date.getHours() - 12, date.getMinutes().toString().padStart(2, "0")].join(":")} pm`;
+  return `${[date.getMonth() + 1, date.getDate(), date.getFullYear() - 2000].join("/")} ${[date.getHours() % 12, date.getMinutes().toString().padStart(2, "0")].join(":")} ${date.getHours() < 12 ? "am" : "pm"}`;
 }
 
 // Function to build a Markdown file
