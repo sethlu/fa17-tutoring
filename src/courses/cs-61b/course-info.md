@@ -1,5 +1,5 @@
 
-Website: https://inst.eecs.berkeley.edu/~cs-61b/fa17/
+Website: https://inst.eecs.berkeley.edu/~cs61b/fa17/
 
 <div data-markdown class="cards">
   <div data-markdown>
