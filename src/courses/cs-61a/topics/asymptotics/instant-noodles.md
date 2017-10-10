@@ -6,7 +6,8 @@ For each of the functions below, find the order of growth that best describes th
 1. Code:
 
     ```py
-    def foo(n): i=1
+    def foo(n):
+      i = 1
       while i < n:
         i += 10
       n += 5
