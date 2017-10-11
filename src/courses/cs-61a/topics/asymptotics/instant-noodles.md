@@ -30,10 +30,11 @@ For each of the functions below, find the order of growth that best describes th
 1. Code:
 
     ```py
-    def bar(n): i=1
+    def bar(n):
+      i = 1
       while i < n:
         i += i
-    i += i
+      i += i
     ```
 
 1. Code:

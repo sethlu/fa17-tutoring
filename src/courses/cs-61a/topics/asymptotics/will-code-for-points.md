@@ -9,7 +9,8 @@
       def __init__(self, root, branches=[]):
         self.root = root
         for branch in branches:
-        assert isinstance(branch, Tree) self.branches = list(branches)
+          assert isinstance(branch, Tree)
+          self.branches = list(branches)
 
       def is_leaf(self):
         return not self.branches
@@ -26,7 +27,8 @@
       Tree(2)
       >>> r = tree(3, [tree(4, [tree(5), tree(6)]), tree(7, [tree(8)])])
       >>> r
-      [3, [4, [5], [6]], [7, [8]]] >>> objectify(r)
+      [3, [4, [5], [6]], [7, [8]]]
+      >>> objectify(r)
       Tree(3, [Tree(4, [Tree(5), Tree(6)]), Tree(7, [Tree(8)])])
       """
 
