@@ -20,8 +20,8 @@
       """
       Return a Tree instance equivalent to a tree represented as a list.
 
-      >>> m = tree (2)
-      >>> m [2]
+      >>> m = tree(2)
+      >>> m[2]
       >>> objectify(m)
       Tree(2)
       >>> r = tree(3, [tree(4, [tree(5), tree(6)]), tree(7, [tree(8)])])
@@ -29,7 +29,7 @@
       [3, [4, [5], [6]], [7, [8]]] >>> objectify(r)
       Tree(3, [Tree(4, [Tree(5), Tree(6)]), Tree(7, [Tree(8)])])
       """
-      
+
       return __________
     ```
 
