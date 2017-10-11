@@ -4,23 +4,32 @@
 const path = require("path");
 const fs = require("fs-extra");
 const replaceExt = require("replace-ext");
+const util = require("../util");
 
-function getTimestamp(str) {
-  let parts = str.split("-");
+function parseDate(str) {
+  let parts = str.split("-").slice(0, 5).map(str => parseInt(str));
   let len = parts.length;
-  if (len >= 3 && len <= 5) {
-    let date = [parts[0], parts[1], parts[2]].join("/");
-    if (len >= 4) {
-      date += ` ${parts.slice(3).join(":")} pm`;
-    }
-    return date;
+  let date = new Date();
+
+  // Use a better way to do this
+  if (len >= 3) {
+    date.setMonth(parts[0] - 1);
+    date.setDate(parts[1]);
+    date.setYear(parts[2] + 2000);
+    if (len >= 4) date.setHours(parts[3] + 12);
+    else date.setHours(0);
+    if (len >= 5) date.setMinutes(parts[4]);
+    else date.setMinutes(0);
   }
-  return str;
+
+  return date;
 }
 
 function html() {
   return fs.readdirSync(path.join(__dirname, "compilations"))
-    .map(file => `- {.link ${path.join("compilations", file)} | ${getTimestamp(replaceExt(file, ""))}}`)
+    .map(file => [parseDate(replaceExt(file, "")), file])
+    .sort((file1, file2) => file1[0] - file2[0])
+    .map(file => `- {.link ${path.join("compilations", file[1])} | ${util.getTimestamp(file[0])}}`)
     .join("\n");
 }
 
