@@ -18,7 +18,7 @@
       if __________:
         return 0
       elif __________:
-        return 1 + __________:
+        return 1 + __________
       else:
         return __________
     ```
