@@ -21,12 +21,18 @@
         __________
 
     def fib_groot(n):
-      """Return a Fibonacci GrootTree.
-      >>> t = fib_groot (3)
-      >>> t.entry 2
-      >>> t.parent.is_empty True
-      >>> t.left.parent.entry 2
-      >>> t.right.left.parent.right.parent.entry 1
+      """
+      Return a Fibonacci GrootTree.
+
+      >>> t = fib_groot(3)
+      >>> t.entry
+      2
+      >>> t.parent.is_empty
+      True
+      >>> t.left.parent.entry
+      2
+      >>> t.right.left.parent.right.parent.entry
+      1
       """
 
       if n == 0 or n == 1:
@@ -53,13 +59,17 @@
       """
       The number of paths through g with entries s.
 
-      >>> t = fib_groot (3)
-      >>> paths(t, [1]) 0
+      >>> t = fib_groot(3)
+      >>> paths(t, [1])
+      0
       >>> paths(t, [2])
       1
-      >>> paths(t, [2, 1, 2, 1, 0]) 2
-      >>> paths(t, [2, 1, 0, 1, 0]) 1
-      >>> paths(t, [2, 1, 2, 1, 2, 1]) 8
+      >>> paths(t, [2, 1, 2, 1, 0])
+      2
+      >>> paths(t, [2, 1, 0, 1, 0])
+      1
+      >>> paths(t, [2, 1, 2, 1, 2, 1])
+      8
       """
 
       if g is BinaryTree.empty __________:
