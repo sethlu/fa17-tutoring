@@ -30,13 +30,13 @@
       """
       Return a list of lists of 1’s and 6’s that do not contain 1 after 1.
 
-      >>> no_eleven (2)
+      >>> no_eleven(2)
       [[6, 6], [6, 1], [1, 6]]
-      >>> no_eleven (3)
+      >>> no_eleven(3)
       [[6, 6, 6], [6, 6, 1], [6, 1, 6], [1, 6, 6], [1, 6, 1]]
-      >>> no_eleven (4)[:4] # first half
+      >>> no_eleven(4)[:4] # first half
       [[6, 6, 6, 6], [6, 6, 6, 1], [6, 6, 1, 6], [6, 1, 6, 6]]
-      >>> no_eleven (4)[4:] # second half
+      >>> no_eleven(4)[4:] # second half
       [[6, 1, 6, 1], [1, 6, 6, 6], [1, 6, 6, 1], [1, 6, 1, 6]]
       """
 
