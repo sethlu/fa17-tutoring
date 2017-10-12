@@ -28,11 +28,12 @@
       >>> t.left.parent.entry 2
       >>> t.right.left.parent.right.parent.entry 1
       """
+
       if n == 0 or n == 1:
         return GrootTree(n)
       else:
         left, right = fib_groot(n - 2), fib_groot(n - 1)
-      return GrootTree(left.entry + right.entry, left, right)
+        return GrootTree(left.entry + right.entry, left, right)
     ```
 
 1. Fill in the blanks of the implementation of `paths`, a function that takes two arguments: a `GrootTree` instance `g` and a list `s`. It returns the number of paths through `g` whose entries are the elements of `s`. A path through a `GrootTree` can extend either to a branch or its `parent`.
