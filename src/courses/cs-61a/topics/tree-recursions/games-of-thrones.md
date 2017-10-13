@@ -21,7 +21,7 @@ def children(tree):
       """
       Return the entries of the parent and grandparent of the node with entry name in family_tree.
 
-      >>> t = tree('Tytos', [ tree('Tywin', [
+      >>> t = tree('Tytos', [
       ...   tree('Tywin', [
       ...     tree('Cersei'), tree('Jaime'), tree('Tyrion')
       ...   ]),

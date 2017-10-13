@@ -10,7 +10,7 @@
         self.root = root
         for branch in branches:
           assert isinstance(branch, Tree)
-          self.branches = list(branches)
+        self.branches = list(branches)
 
       def is_leaf(self):
         return not self.branches
