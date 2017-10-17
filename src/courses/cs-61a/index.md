@@ -53,6 +53,13 @@ Disambiguation: Actual recursions on abstract tree structures.
 Wait, you say your program *runs*? Well, how fast?
 
   </div>
+  <div data-markdown>
+
+{.#} {.link topics/objects-inheritance/index.md | Objects & Inheritance}
+
+So this is about actual objects now.
+
+  </div>
 </div>
 
 {.#--}

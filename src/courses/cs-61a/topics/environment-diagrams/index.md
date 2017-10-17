@@ -8,4 +8,6 @@
 
 {.include environmental-policy.md}
 
+{.include volcans.md}
+
 {.#--}
