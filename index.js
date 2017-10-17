@@ -62,13 +62,22 @@ converter.setFlavor("github");
 // Function to build a Markdown file
 let build = (function () {
 
-  let builds = new Set();
+  let builds = {};
 
   function build(entry) {
-    console.log("Building", entry);
+
+    // Avoid building a same entry twice
+    if (builds.hasOwnProperty(entry)) {
+
+      console.log("Skipping", entry, "already built");
+
+      return builds[entry];
+    }
 
     if (preprocess.supportedExt.indexOf(path.extname(entry).toLowerCase()) < 0) {
       // Only preprocess & convert supported files
+
+      console.log("Copying", entry);
 
       let filepath = path.join("dist", path.relative("src", entry));
       let filedir = path.dirname(filepath);
@@ -77,19 +86,15 @@ let build = (function () {
 
       fs.copySync(entry, filepath);
 
+      builds[entry] = filepath;
+
       return filepath;
     }
 
-    // Avoid building a same entry twice
-    if (builds.has(entry)) {
-      console.log("Skipping", entry, "already built");
-      return;
-    }
-
-    builds.add(entry);
-
     // Preprocess the text
     // Build & link related documents
+
+    console.log("Building", entry);
 
     // Input dir
     let dir = path.dirname(entry);
@@ -166,6 +171,8 @@ let build = (function () {
           </footer>
         </body>
       </html>`);
+
+    builds[entry] = filepath;
 
     return filepath;
   }
