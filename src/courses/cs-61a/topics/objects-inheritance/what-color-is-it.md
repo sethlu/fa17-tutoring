@@ -4,6 +4,8 @@
 
 Implement the `look` method of the `Dress` class. The `look` method returns a `Dress` instance's current color when the number of times that the instance's `look` method has ever been invoked evenly divides the total number times that the `look` method of any `Dress` instance has ever been invoked. Otherwise, the instance's `color` changes to the most recently returned color from any call to `look`, and `None` is returned.
 
+<!-- TODO: The highlighting script needs fixing for the doctest below to be display correctly -->
+
 ```py
 class Dress:
   """
