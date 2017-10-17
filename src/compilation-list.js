@@ -16,7 +16,7 @@ function parseDate(str) {
     date.setMonth(parts[0] - 1);
     date.setDate(parts[1]);
     date.setYear(parts[2] + 2000);
-    if (len >= 4) date.setHours(parts[3] + 12);
+    if (len >= 4) date.setHours(parts[3] + (parts[3] <= 6 ? 12 : 0));
     else date.setHours(0);
     if (len >= 5) date.setMinutes(parts[4]);
     else date.setMinutes(0);
