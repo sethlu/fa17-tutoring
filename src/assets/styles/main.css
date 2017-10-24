@@ -27,7 +27,7 @@ code {
 pre {
   margin: 1.5em 0;
   padding: 1.5em 2em 1.5em calc(2em - 3px);
-  border-left: solid 3px #3b7ea1;
+  border-left: solid 3px #5d5c61;
   background-color: #fafafa;
   overflow-x: auto;
   line-height: 1.25;
@@ -49,28 +49,28 @@ h1 {
   font-size: 2em;
   margin: 1.25em 0;
   line-height: 1.25;
-  color: #3b7ea1;
+  color: #7395ae;
 }
 
 h2 {
   font-size: 1.5em;
   margin: 1.25em 0;
   line-height: 1.25;
-  color: #46535e;
+  color: #557a95;
 }
 
 h3 {
   font-size: 1.2em;
   margin: 1.25em 0;
   line-height: 1.25;
-  color: #46535e;
+  color: #557a95;
 }
 
 h4 {
   font-size: 1em;
   margin: 1.5em 0;
   line-height: 1.25;
-  color: #46535e;
+  color: #557a95;
 }
 
 p {
@@ -80,7 +80,7 @@ p {
 blockquote {
   margin: 1.5em 0;
   padding: 0 2em 0 calc(2em - 3px);
-  border-left: solid 3px #ddd5c7;
+  border-left: solid 3px #379683;
   overflow: hidden;
 }
 
@@ -106,7 +106,7 @@ details > summary {
   padding: 0 2em 0 1.5em;
   width: 392px;
   min-width: 280px;
-  border: solid 1px #ddd;
+  border: solid 1px #ccc;
   border-radius: 3px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
