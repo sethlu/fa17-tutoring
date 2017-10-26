@@ -37,4 +37,4 @@
     ; expect (car (cdr (car b)))
     ```
 
-1. What expression will (directions 4 'a) evaluate to?
+1. What expression will `(directions 4 'a)` evaluate to?
