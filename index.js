@@ -4,8 +4,9 @@
 const path = require("path");
 const fs = require("fs-extra");
 const showdown = require("showdown");
-const showdownHighlight = require("showdown-highlight");
 const replaceExt = require("replace-ext");
+const highlight = require("highlight.js");
+const decodeHTML = require("html-encoder-decoder").decode;
 const util = require("./util");
 
 // Regex's
@@ -54,9 +55,7 @@ let preprocess = (function () {
 })();
 
 // Universally used converter
-let converter = new showdown.Converter({
-  extensions: [showdownHighlight]
-});
+let converter = new showdown.Converter();
 converter.setFlavor("github");
 
 // Function to build a Markdown file
@@ -150,6 +149,14 @@ let build = (function () {
     // Convert Markdown to HTML
 
     let html = converter.makeHtml(text);
+
+    // Code coloring
+
+    // Code adapted from: https://github.com/Bloggify/showdown-highlight
+    html = showdown.helper.replaceRecursiveRegExp(html, function (wholeMatch, match, left, right) {
+      match = decodeHTML(match);
+      return left + highlight.highlightAuto(match).value + right;
+    }, "<pre><code\\b[^>]*>", "</code></pre>", "g");
 
     // Save the generated HTML
 
