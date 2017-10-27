@@ -34,7 +34,7 @@ code [contenteditable] {
   height: 1.25em;
   border: none;
   outline: none;
-  min-width: 20em;
+  min-width: 8em;
   max-width: 30em;
   background-color: #f0f0f0;
   border-radius: 3px;
