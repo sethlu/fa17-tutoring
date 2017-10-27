@@ -158,6 +158,12 @@ let build = (function () {
       return left + highlight.highlightAuto(match).value + right;
     }, "<pre><code\\b[^>]*>", "</code></pre>", "g");
 
+    // Editable code
+
+    html = html.replace(/_{10}/g, function (match) {
+      return `<span contenteditable spellcheck="false"></span>`;
+    });
+
     // Save the generated HTML
 
     fs.ensureDirSync(filedir);
@@ -169,6 +175,7 @@ let build = (function () {
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <title>Fall 2017 Tutoring</title>
           <link rel="stylesheet" type="text/css" href="${path.relative(filedir, "dist") || "."}/assets/styles/main.css">
+          <script type="text/javascript" src="${path.relative(filedir, "dist") || "."}/assets/scripts/main.js"></script>
         </head>
         <body>
           ${html}
