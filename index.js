@@ -25,28 +25,53 @@ let preprocess = (function () {
     let dir = path.dirname(entry);
     let text;
 
+    // Dynamic content flag, require page rebuilding
+    let dynamic = false;
+
+    // Fetch raw text
+
     switch (path.extname(entry)) {
       case ".js":
         text = require("./" + path.join(path.dirname(entry), path.basename(entry, ".js")))();
+        dynamic = true;
         break;
       default:
         text = fs.readFileSync(entry, "utf8");
     }
 
+    // Resolve relative links
+
     text = text.replace(regexLink, function (match, filepath, name) {
       return `{.link ${path.join(dir, filepath)}${name ? ` | ${name}` : ""}}`;
     });
 
+    // Include text fragments
+
+    let includes = [];
     text = text.replace(regexInclude, function (match, filepath) {
-      console.log("Including", path.join(dir, filepath));
+      filepath = path.join(dir, filepath);
 
-      text = preprocess(path.join(dir, filepath));
+      includes.push(filepath);
 
-      return text;
+      console.log("Including", filepath);
+
+      let preprocessed = preprocess(filepath);
+
+      // Propagate dynamic content flag
+      if (preprocessed.dynamic) dynamic = true;
+      // Flatten included fragments
+      includes.push(...preprocessed.includes);
+
+      return preprocessed.text;
     });
 
     filestack.pop();
-    return text;
+
+    return {
+      text,
+      dynamic,
+      includes
+    };
   }
 
   preprocess.supportedExt = [".md", ".js"];
@@ -61,17 +86,7 @@ converter.setFlavor("github");
 // Function to build a Markdown file
 let build = (function () {
 
-  let builds = {};
-
-  function build(entry) {
-
-    // Avoid building a same entry twice
-    if (builds.hasOwnProperty(entry)) {
-
-      console.log("Skipping", entry, "already built");
-
-      return builds[entry];
-    }
+  function _build(entry) {
 
     if (preprocess.supportedExt.indexOf(path.extname(entry).toLowerCase()) < 0) {
       // Only preprocess & convert supported files
@@ -85,9 +100,11 @@ let build = (function () {
 
       fs.copySync(entry, filepath);
 
-      builds[entry] = filepath;
-
-      return filepath;
+      return {
+        src: entry,
+        dest: filepath,
+        time: new Date().valueOf()
+      };
     }
 
     // Preprocess the text
@@ -103,7 +120,8 @@ let build = (function () {
     let filedir = path.dirname(filepath)
 
     // Input text
-    let text = preprocess(entry);
+    let preprocessed = preprocess(entry);
+    let text = preprocessed.text;
 
     // Headings
 
@@ -128,11 +146,11 @@ let build = (function () {
 
     // Links
 
+    let links = [];
     text = text.replace(regexLink, function(match, entry, name) {
+      links.push(entry);
 
-      let linkedfilepath = build(entry);
-
-      console.log("Linking");
+      let linkedfilepath = build(entry).dest;
 
       let url = path.relative(
         filedir,
@@ -186,9 +204,107 @@ let build = (function () {
         </body>
       </html>`);
 
-    builds[entry] = filepath;
+    return {
+      src: entry,
+      dest: filepath,
+      time: new Date().valueOf(),
+      dynamic: preprocessed.dynamic,
+      links,
+      includes: preprocessed.includes
+    };
+  }
 
-    return filepath;
+  // Cache last modified times for files
+
+  let mtimes = {};
+
+  function getLastModifiedTime(filepath) {
+    if (!mtimes[filepath]) {
+      let stats = fs.statSync(filepath);
+      mtimes[filepath] = new Date(stats.mtime).valueOf();
+    }
+    return mtimes[filepath];
+  }
+
+  let scriptmtime = getLastModifiedTime(__filename);
+
+  // Cache build history
+
+  let builds;
+  try {
+    builds = JSON.parse(fs.readFileSync("tmp/builds.json", "utf8"));
+  } catch (e) {
+
+  } finally {
+    // Enfore builds as object
+    if (typeof builds !== "object" || !builds) builds = {};
+  }
+
+  // Register process-on-exit handler
+
+  process.on("exit", function (e) {
+
+    console.log("Caching builds...");
+
+    fs.ensureDirSync("tmp");
+
+    fs.writeFileSync("tmp/builds.json", JSON.stringify(builds, function (key, value) {
+      if (typeof value === "boolean") {
+        return value || undefined; // Only save true value
+      }
+      if (Array.isArray(value)) {
+        return value.length > 0 ? value : undefined; // Only save non-empty array
+      }
+      return value;
+    }, "  "));
+
+  });
+
+  // Exposed build function
+
+  function build(entry) {
+
+    let build;
+
+    // Avoid building a same entry twice
+    if (builds[entry]) {
+      build = builds[entry];
+
+      if (build.dynamic) {
+        // Require rebuild
+
+        build = null;
+
+      } else {
+        // Detect rebuild
+
+        let entries = [entry].concat(build.includes || [], build.links || []);
+        for (let entry of entries) {
+
+          let entrymtime = getLastModifiedTime(entry);
+          if (entrymtime > build.time || scriptmtime > build.time) {
+            // Build outdated, either due to source modification or script modification
+            build = null;
+            break;
+          }
+
+        }
+
+      }
+
+    }
+
+    // If already built, do not rebuild
+    if (build) {
+      console.log("Skipping", entry, "already built");
+      return build;
+    }
+
+    build = _build(entry);
+
+    builds[entry] = build;
+
+    return build;
   }
 
   return build;
