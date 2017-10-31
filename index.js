@@ -117,7 +117,7 @@ let build = (function () {
 
     // Output path & dir
     let filepath = path.join("dist", path.relative("src", replaceExt(entry, ".html")));
-    let filedir = path.dirname(filepath)
+    let filedir = path.dirname(filepath);
 
     // Input text
     let preprocessed = preprocess(entry);
@@ -263,28 +263,27 @@ let build = (function () {
   // Exposed build function
 
   function build(entry) {
-
-    let build;
+    let cache;
 
     // Avoid building a same entry twice
     if (builds[entry]) {
-      build = builds[entry];
+      cache = builds[entry];
 
-      if (build.dynamic) {
+      if (cache.dynamic) {
         // Require rebuild
 
-        build = null;
+        cache = null;
 
       } else {
         // Detect rebuild
 
-        let entries = [entry].concat(build.includes || [], build.links || []);
+        let entries = [entry].concat(cache.includes || []);
         for (let entry of entries) {
 
           let entrymtime = getLastModifiedTime(entry);
-          if (entrymtime > build.time || scriptmtime > build.time) {
+          if (entrymtime > cache.time || scriptmtime > cache.time) {
             // Build outdated, either due to source modification or script modification
-            build = null;
+            cache = null;
             break;
           }
 
@@ -295,16 +294,23 @@ let build = (function () {
     }
 
     // If already built, do not rebuild
-    if (build) {
+    if (cache) {
+
       console.log("Skipping", entry, "already built");
-      return build;
+
+      // Check linked files' statuses
+      if (cache.links) {
+        cache.links.forEach(build);
+      }
+
+      return cache;
     }
 
-    build = _build(entry);
+    cache = _build(entry);
 
-    builds[entry] = build;
+    builds[entry] = cache;
 
-    return build;
+    return cache;
   }
 
   return build;
