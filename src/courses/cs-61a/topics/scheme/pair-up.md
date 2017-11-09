@@ -1,5 +1,5 @@
 
-{.#} Pair Up *(sp17-final)*
+{.#} Pair Up *(sp17-final-8)*
 
 Fill in the Scheme pairs function so that (pairs L), where L is a list, produces a list of lists, where each of these lists contains a pair of elements from L. The function must be tail-recursive. You need not define (or use) the reverse function.
 
@@ -23,7 +23,6 @@ scm> (pairs ’())
       (__________ result)
       (__________ (cons __________))
       (else (accum-pairs __________
-                         __________
                          __________)
       )
     )

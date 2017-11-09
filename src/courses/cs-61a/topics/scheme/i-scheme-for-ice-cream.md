@@ -1,5 +1,5 @@
 
-{.#} I Scheme for Ice Cream *(fa16-final)*
+{.#} I Scheme for Ice Cream *(fa16-final-6)*
 
 The built-in append procedure is equivalent in behavior to the following definition.
 

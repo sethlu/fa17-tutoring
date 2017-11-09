@@ -7,6 +7,7 @@
 
     ```scheme
     (define (directions n sym)
+
       (define (search s exp)
         ; Search an expression s for n and return an expression based on exp
         (cond
@@ -15,6 +16,7 @@
           (else (search-list s exp))
         )
       )
+
       (define (search-list s exp)
         ; Search a nested list s for n and return an expression based on exp
         (let
@@ -25,7 +27,9 @@
           (if (null? first) rest first)
         )
       )
+
       (search (eval sym) sym)
+
     )
 
     (define a '(1 (2 3) ((4))))
@@ -33,7 +37,8 @@
     ; expect (car a)
     (directions 2 'a)
     ; expect (car (car (cdr a)))
-    (define b '((3 4) 5)) (directions 4 'b)
+    (define b '((3 4) 5))
+    (directions 4 'b)
     ; expect (car (cdr (car b)))
     ```
 
