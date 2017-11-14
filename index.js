@@ -323,6 +323,7 @@ let entries = ["src/index.md"];
 entries.forEach(build);
 
 // Copy assets
+fs.copySync("src/.htaccess", "dist/.htaccess");
 fs.copySync("src/assets", "dist/assets");
 fs.copySync("node_modules/highlight.js/styles/atom-one-light.css", "dist/assets/styles/atom-one-light.css");
 
