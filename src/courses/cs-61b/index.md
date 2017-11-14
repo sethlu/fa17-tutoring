@@ -60,6 +60,20 @@ Fortify your castle of data abstraction.
 Catch `Error`s & checked/unchecked `Exception`s.
 
   </div>
+  <div data-markdown>
+
+{.#} Linked Lists
+
+Singly & doubly linked lists. Sentinels?
+
+  </div>
+  <div data-markdown>
+
+{.#} Bits
+
+Quantum computing does something different.
+
+  </div>
 </div>
 
 {.#--}

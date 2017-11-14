@@ -8,16 +8,12 @@ Website: https://inst.eecs.berkeley.edu/~cs61b/fa17/
 
 Time: Wed 9/27/17 8-10 pm
 
-{.link resources/61b-fa17-mt1-solution.pdf | Solution}
-
   </div>
   <div data-markdown>
 
 {.#+} Midterm 2
 
 Time: Wed 11/1/17 8-10 pm
-
-{.link resources/61b-fa17-mt2-solution.pdf | Solution}
 
   </div>
   <div data-markdown>
