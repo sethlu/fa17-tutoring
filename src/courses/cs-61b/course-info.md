@@ -17,6 +17,8 @@ Time: Wed 9/27/17 8-10 pm
 
 Time: Wed 11/1/17 8-10 pm
 
+{.link resources/61b-fa17-mt2-solution.pdf | Solution}
+
   </div>
   <div data-markdown>
 
