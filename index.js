@@ -191,7 +191,7 @@ let build = (function () {
         <head>
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>Fall 2017 Tutoring</title>
+          <title>Spring 2018 Tutoring</title>
           <link rel="stylesheet" type="text/css" href="${path.relative(filedir, "dist") || "."}/assets/styles/main.css">
           <script type="text/javascript" src="${path.relative(filedir, "dist") || "."}/assets/scripts/main.js"></script>
         </head>
@@ -199,7 +199,7 @@ let build = (function () {
           ${html}
           <footer>
             <p>This page was last generated on ${util.getTimestamp()}.<br>If you think you've found a bug, please <a href="https://github.com/sethlu/tutoring/issues" target="_blank">report it on GitHub</a>, thanks!</p>
-            <p><a href="https://mintkit.net" target="_blank">Zhuo Lu</a> © 2017</p>
+            <p><a href="https://mintkit.net" target="_blank">Zhuo Lu</a> © 2018</p>
           </footer>
         </body>
       </html>`);
