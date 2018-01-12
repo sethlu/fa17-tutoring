@@ -198,7 +198,7 @@ let build = (function () {
         <body>
           ${html}
           <footer>
-            <p>This page was last generated on ${util.getTimestamp()}.<br>If you think you've found a bug, please <a href="https://github.com/sethlu/fa17-tutoring/issues" target="_blank">report it on GitHub</a>, thanks!</p>
+            <p>This page was last generated on ${util.getTimestamp()}.<br>If you think you've found a bug, please <a href="https://github.com/sethlu/tutoring/issues" target="_blank">report it on GitHub</a>, thanks!</p>
             <p><a href="https://mintkit.net" target="_blank">Zhuo Lu</a> © 2017</p>
           </footer>
         </body>
