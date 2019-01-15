@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@webdesigndecal/mark2html": "0.0.5"
+    "@webdesigndecal/mark2html": "0.0.6"
   }
 }
