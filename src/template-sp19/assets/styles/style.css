@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+
+html {
+    font-size: 16px;
+    font-family: Inconsolata, Menlo, monospace;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 4em 0;
+    color: #333;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+h4, h5, h6 {
+    font-size: 1em;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    color: #4f80e1;
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}

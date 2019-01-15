@@ -1,2 +1,0 @@
-
-Website: http://wdd.io

@@ -1,8 +1,17 @@
+{.let page-title Spring 2019}
 
-{.#} Spring 2018 Tutoring
+{.let body}
+
+{.#} Spring 2019
 {.#++}
 
-{.#} {.link courses/cs-98-198/index.md | CS 98/198: Web&nbsp;Design&nbsp;DeCal}
-{.include courses/cs-98-198/course-info.md}
+{.#} {.link courses/cs-184/index.md | COMPSCI 184: Computer Graphics and Imagining}
+{.#++}
+{.include courses/cs-184/course-info.md}
+{.#--}
 
 {.#--}
+
+{./let}
+
+{.include template-sp19/v1.md}
