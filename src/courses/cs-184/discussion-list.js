@@ -22,7 +22,9 @@ module.exports = function () {
         .sort((a, b) => a.index - b.index)
         .map((entry) => {
             return `
-{.#} {.link discussions/${entry.index}/index.md | Discussion ${entry.index}}${entry.info ? `: ${entry.info.topics.join(", ")}` : ""}
+{.#} {.link discussions/${entry.index}/index.md | Discussion ${entry.index}}${entry.info.topics ? `: ${entry.info.topics.join(", ")}` : ""}
+
+${entry.info.lectures ? `**Lectures:** ${entry.info.lectures.join("; ")}` : ""}
             `;
         })
         .join("\n");

@@ -1,7 +1,12 @@
 {
+    "lectures": [
+        "Introduction",
+        "Drawing Triangles",
+        "Sampling and Aliasing, Transforms"
+    ],
     "topics": [
-        "Intro",
-        "Triangles",
-        "Transforms"
+        "C++",
+        "Images as Data",
+        "Convolution"
     ]
 }

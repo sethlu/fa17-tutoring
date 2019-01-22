@@ -4,7 +4,7 @@
 
 # Discussion 1
 
-## Thoughts
+## Bullets
 
 - Rasterization
     - Point in triangle test (three-line test)
