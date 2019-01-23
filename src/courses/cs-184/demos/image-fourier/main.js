@@ -269,9 +269,25 @@ window.addEventListener("load", () => {
     // Interactive stuff
 
     document.querySelector("#file-input").addEventListener("change", (event) => {
+        document.querySelector("#file-selection").value = "";
+
         const imageFile = event.target.files[0];
         const image = new Image();
         image.src = URL.createObjectURL(imageFile);
+        image.addEventListener("load", () => {
+            contexts.spatial.drawImage(image, 0, 0, canvases.spatial.width, canvases.spatial.height);
+
+            spatialToFreqStep();
+            kernelStep();
+            reconstructStep();
+        });
+    });
+
+    document.querySelector("#file-selection").addEventListener("change", (event) => {
+        document.querySelector("#file-input").value = "";
+
+        const image = new Image();
+        image.src = event.target.value;
         image.addEventListener("load", () => {
             contexts.spatial.drawImage(image, 0, 0, canvases.spatial.width, canvases.spatial.height);
 
