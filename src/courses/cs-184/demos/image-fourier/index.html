@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+    <div id="dashboard">
+        <div id="spatial-title">
+            Spatial domain
+            <input id="file-input" type="file" accept="image/*">
+        </div>
+        <canvas id="spatial" width="32" height="32"></canvas>
+        <div id="spatial-channel-title">Spatial domain (channels)</div>
+        <canvas id="spatial-0" width="32" height="32"></canvas>
+        <canvas id="spatial-1" width="32" height="32"></canvas>
+        <canvas id="spatial-2" width="32" height="32"></canvas>
+        <div id="freq-channel-title">Frequency domain (channels)</div>
+        <canvas id="freq-0" width="32" height="32"></canvas>
+        <canvas id="freq-1" width="32" height="32"></canvas>
+        <canvas id="freq-2" width="32" height="32"></canvas>
+        <div id="kernel-title">
+            Kernel
+            <input id="kernel-aperture-a" type="range" min="0" max="30">
+            <input id="kernel-aperture-b" type="range" min="0" max="30">
+        </div>
+        <canvas id="kernel" width="32" height="32"></canvas>
+        <div id="freq-filtered-channel-title">Frequency domain (channels filtered)</div>
+        <canvas id="freq-filtered-0" width="32" height="32"></canvas>
+        <canvas id="freq-filtered-1" width="32" height="32"></canvas>
+        <canvas id="freq-filtered-2" width="32" height="32"></canvas>
+        <div id="spatial-reconstruct-channel-title">Spatial domain (channels reconstructed)</div>
+        <canvas id="spatial-reconstruct-0" width="32" height="32"></canvas>
+        <canvas id="spatial-reconstruct-1" width="32" height="32"></canvas>
+        <canvas id="spatial-reconstruct-2" width="32" height="32"></canvas>
+        <div id="spatial-reconstruct-title">Spatial domain (reconstructed)</div>
+        <canvas id="spatial-reconstruct" width="32" height="32"></canvas>
+    </div>
+</body>
+
+</html>
