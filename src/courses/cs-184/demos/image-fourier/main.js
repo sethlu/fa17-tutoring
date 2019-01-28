@@ -248,8 +248,8 @@ window.addEventListener("load", () => {
         const centerY = kernelDataset.height / 2;
 
         const offsetKernelDataset = kernelDataset.offset(kernelDataset.width / 2, kernelDataset.height / 2);
-        for (let y = 0; y < kernelDataset.width; y++) {
-            for (let x = 0; x < kernelDataset.height; x++) {
+        for (let y = 0; y < kernelDataset.height; y++) {
+            for (let x = 0; x < kernelDataset.width; x++) {
                 const distance = Math.sqrt(Math.pow(x + 0.5 - centerX, 2) + Math.pow(y + 0.5 - centerY, 2));
                 offsetKernelDataset(x, y).set(low <= distance && distance < high ? 1 : 0);
             }
