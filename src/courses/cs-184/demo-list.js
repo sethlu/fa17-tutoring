@@ -7,7 +7,7 @@ module.exports = function () {
         .sort((a, b) => a.index - b.index)
         .map((entry) => {
             return `
-{.#} {.link demos/${entry}}
+{.#} {.link demos/${entry} | ${entry}}
             `;
         })
         .join("\n");

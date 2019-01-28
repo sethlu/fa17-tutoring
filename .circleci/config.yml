@@ -25,7 +25,7 @@ jobs:
           at: ~/
       - run:
           name: Deploy over rsync
-          command: rsync -rv -e 'ssh -oHostKeyAlgorithms=ssh-dss' ~/repo/src/index_dist/ $SSH_USER@$SSH_HOST:$REMOTE_DIR
+          command: rsync -rv -e 'ssh -oHostKeyAlgorithms=ssh-dss' ~/repo/dist/ $SSH_USER@$SSH_HOST:$REMOTE_DIR
 
 workflows:
   version: 2

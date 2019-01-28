@@ -43,6 +43,27 @@
         - Simple shading: Blinn-Phong Reflection Model
     - Framebuffer operations
 
+---
+
+## Barycentric coordinates
+
+{.raw}
+
+<figure>
+    <div class="canvas-container slim-border">
+        <canvas>Your browser doesn't support HTML5 canvas tag.</canvas>
+        <div class="circle-control">A</div>
+        <div class="circle-control">B</div>
+        <div class="circle-control">C</div>
+        <div class="canvas-stats"></div>
+    </div>
+    <figcaption>Barycentric coordinates demo</figcaption>
+</figure>
+<link rel="stylesheet" type="text/css" href="{.link!* bary.css}">
+<script type="text/javascript" src="{.link!* bary.js}"></script>
+
+{./raw}
+
 {./let}
 
 {.include ../../../../template-sp19/v1.md}

@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "mark2html src/index.md",
+    "start": "mark2html src/index.md dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@webdesigndecal/mark2html": "0.0.8"
+    "@webdesigndecal/mark2html": "0.0.10"
   }
 }

@@ -7,12 +7,16 @@
 
 {.include course-info.md}
 
+---
+
 {.#} Sections
 {.#++}
 
 {.include discussion-list.js}
 
 {.#--}
+
+---
 
 {.#} Demos
 {.#++}
