@@ -87,6 +87,15 @@ Stored in a continuous array, the pixels are in row-major order (first, second, 
 
 {.link ../../demos/point-testing/index.md | Point in triangle test demo}
 
+## Nyquist theorem
+
+**Nyquist frequency: Half the sampling frequency**
+We get no aliasing from frequencies less than the Nyquist frequency.
+
+As an example, for an image of stripes (black & white), if we're sampling at every `16px`, stripes at cycle every `32px` or more will result in no aliasing.
+
+Also, if there are stripes that cycle at every `8px` (`4px` black, then `4px` white), we'd want to sample at every `4px` to avoid aliasing.
+
 ## Filtering
 
 {.link ../../demos/image-fourier | Image fourier analysis demo}
