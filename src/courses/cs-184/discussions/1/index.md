@@ -98,6 +98,8 @@ Also, if there are stripes that cycle at every `8px` (`4px` black, then `4px` wh
 
 ## Filtering
 
+Convolution in the spatial domain equals to point-wise multiplication in the frequency domain.
+
 {.link ../../demos/image-fourier | Image fourier analysis demo}
 
 ## Convolution example
