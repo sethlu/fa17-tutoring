@@ -153,6 +153,125 @@ unsigned encode(const std::string& filename,
                 LodePNGColorType colortype = LCT_RGBA, unsigned bitdepth = 8);
 ```
 
+### Annotated reference solution
+
+```cpp
+void Filter::read(std::string filename) {
+
+	// Open the rile
+	std::ifstream file(filename);
+
+	// Read width & height
+	file >> width >> height;
+
+	// Resize the kernel
+	unsigned int size = width * height;
+	kernel.resize(size);
+
+    // Read the kernel data
+	for (int i = 0; i < size; i++) {
+		file >> kernel[i];
+	}
+
+	// Normalize the filter
+	normalize();
+
+}
+
+void Filter::normalize() {
+
+	// Calc the sum
+	float sum = 0;
+	for (float k : kernel) {
+		sum += k;
+	}
+
+	// Adjust the kernel data
+	for (float &k : kernel) {
+		k /= sum;
+	}
+
+}
+
+const float& Filter::at(int x, int y) const {
+
+	return kernel[y * width + x];
+
+}
+
+void Image::read(std::string filename) {
+	
+	// Clear the image
+	data.clear();
+
+	// Load the image with lodepng
+	lodepng::decode(data, width, height, filename);
+
+}
+
+void Image::write(std::string filename) const {
+
+	// Write the image with lodepng
+	lodepng::encode(filename, data, width, height);
+
+}
+
+uint8_t* Image::at(int x, int y) {
+
+	// Each pixel takes 4 values
+	return &(data[4 * (y * width + x)]);
+
+}
+
+Image Image::operator*(const Filter& filter) {
+
+	// New output image
+	Image oimage(width, height);
+
+	// Iterate every pixel on the output image
+	for (int oy = 0; oy < height; oy++) {
+		for (int ox = 0; ox < width; ox++) {
+
+			// Temporary accumulator
+			float sum[4] = {0, 0, 0, 0};
+
+			// Iterate over the filter
+			for (int fy = 0; fy < filter.height; fy++) {
+				for (int fx = 0; fx < filter.width; fx++) {
+
+					int ix = ox - filter.width / 2 + fx;
+					int iy = oy - filter.height / 2 + fy;
+
+					// Discard pixels outside the image bounds
+					if (ix < 0 || iy < 0 || ix >= width || iy >= height) continue;
+
+					float f = filter.at(fx, fy);
+
+					sum[0] += at(ix, iy)[0] * f;
+					sum[1] += at(ix, iy)[1] * f;
+					sum[2] += at(ix, iy)[2] * f;
+					sum[3] += at(ix, iy)[3] * f;
+
+				}
+			}
+
+			// Output pixel to write to
+			uint8_t *opixel = oimage.at(ox, oy);
+
+			opixel[0] = sum[0];
+			opixel[1] = sum[1];
+			opixel[2] = sum[2];
+			opixel[3] = sum[3];
+
+		}
+	}
+
+	// Return the image
+	return oimage;
+
+}
+```
+
 {./let}
 
 {.include ../../../../template-sp19/v1.md}
