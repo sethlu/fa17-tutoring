@@ -5,7 +5,7 @@
 {.#} Spring 2019
 {.#++}
 
-{.#} {.link courses/cs-184/index.md | COMPSCI 184: Computer Graphics and Imagining}
+{.#} {.link courses/cs-184/index.md | COMPSCI 184: Computer Graphics and Imaging}
 {.#++}
 {.include courses/cs-184/course-info.md}
 {.#--}

@@ -2,7 +2,7 @@
 
 {.let body}
 
-{.#} COMPSCI 184: Computer Graphics and Imagining
+{.#} COMPSCI 184: Computer Graphics and Imaging
 {.#++}
 
 {.include course-info.md}
