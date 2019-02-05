@@ -25,3 +25,13 @@
     color: #fff;
     box-shadow: 0 0 0 2px #fff;
 }
+
+#bary-bary.circle-control:nth-of-type(1) {
+    background-color: #f00;
+}
+#bary-bary.circle-control:nth-of-type(2) {
+    background-color: #0f0;
+}
+#bary-bary.circle-control:nth-of-type(3) {
+    background-color: #00f;
+}

@@ -36,10 +36,22 @@
     <figcaption>Antialiasing demo (pixel sampling rate = 4)</figcaption>
 </figure>
 
+<figure>
+    <div id="bary-bary" class="canvas-container slim-border">
+        <canvas>Your browser doesn't support HTML5 canvas tag.</canvas>
+        <div class="circle-control">A</div>
+        <div class="circle-control">B</div>
+        <div class="circle-control">C</div>
+        <div class="canvas-stats"></div>
+    </div>
+    <figcaption>Barycentric coordinates demo</figcaption>
+</figure>
+
 <link rel="stylesheet" type="text/css" href="{.link!* bary.css}">
 <script type="text/javascript" src="{.link!* bary-line.js}"></script>
 <script type="text/javascript" src="{.link!* bary-tri.js}"></script>
 <script type="text/javascript" src="{.link!* bary-antialiasing.js}"></script>
+<script type="text/javascript" src="{.link!* bary-bary.js}"></script>
 
 {./let}
 

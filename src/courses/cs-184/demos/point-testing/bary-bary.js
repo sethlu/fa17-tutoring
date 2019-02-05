@@ -4,7 +4,7 @@ if (!Number.prototype.clamp) Number.prototype.clamp = function (min, max) {
 
 window.addEventListener("DOMContentLoaded", function () {
 
-    let container = document.querySelector(".canvas-container");
+    let container = document.querySelector("#bary-bary.canvas-container");
     let canvas = container.querySelector("canvas");
     let gl = canvas.getContext("webgl");
     let positionBuffer = gl.createBuffer(), colorBuffer = gl.createBuffer(), indexBuffer = gl.createBuffer();
@@ -140,14 +140,19 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function mouseMoveHandler(event) {
+        let rect = container.getBoundingClientRect();
+        x = (event.clientX - rect.x) / container.offsetWidth;
+        y = (event.clientY - rect.y) / container.offsetHeight;
+
         if (container.circle_control) {
             let element = container.circle_control;
             element.circle_control_x = (element.circle_control_x_ +
                 (event.clientX - element.circle_control_client_x) / container.offsetWidth).clamp(0.1, 0.9);
             element.circle_control_y = (element.circle_control_y_ +
                 (event.clientY - element.circle_control_client_y) / container.offsetHeight).clamp(0.1, 0.9);
-            update();
         }
+        
+        update();
     }
 
     function mouseEndHandler() {
