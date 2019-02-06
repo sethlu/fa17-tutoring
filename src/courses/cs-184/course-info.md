@@ -1,4 +1,6 @@
-**🔗 Course website:** https://cs184.eecs.berkeley.edu/sp19
+**🔗 Shortcut here:** http://cs184.mintkit.net/
+
+**🐻 Course website:** https://cs184.eecs.berkeley.edu/sp19
 
 **🗓 Section:** Tuesday 5&ndash;6pm | Wheeler 204
 
