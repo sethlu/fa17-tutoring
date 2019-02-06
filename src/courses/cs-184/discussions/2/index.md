@@ -47,6 +47,10 @@
 
 👉 [Dorian's discussion 2 slides](https://docs.google.com/presentation/d/1xWQIFD03IYZvK3MhHIm8jKacLmzZNrun_IVqiMNdQdc/)
 
+## Transforms
+
+📖 There's nothing I can say that's better than [Songho's notes for transforms](http://www.songho.ca/opengl/gl_transform.html) on OpenGL.
+
 ## Sampling
 
 **Reducing a continuous-time signal to a discrete-time signal.** Think of it as recording sounds in a digital sound studio.
