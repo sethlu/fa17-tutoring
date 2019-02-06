@@ -35,7 +35,7 @@
             - Bilinear filtering
         - Minification
             - Trilinear filtering
-- Rasterization pipeline
+- Rasterization pipeline (covered in discussion 3)
     - Vertex processing
     - Triangle processing
     - Rasterization
