@@ -27,18 +27,17 @@
         - Separable de Casteljau algorithm
         - Algebraic formula
     - Continuity
-- Geometry (covered in discussion 4)
-    - Representations
-        - Explicit
-            - Point cloud
-            - Polygon mesh
-            - Subdivisions
-            - NURBS
-        - Implicit
-            - Level sets
-            - Algebraic surface
-            - Distance functions
-            - etc.
+- Geometry representations (covered in discussion 4)
+    - Explicit
+        - Point cloud
+        - Polygon mesh
+        - Subdivisions
+        - NURBS
+    - Implicit
+        - Level sets
+        - Algebraic surface
+        - Distance functions
+        - etc.
 
 ---
 

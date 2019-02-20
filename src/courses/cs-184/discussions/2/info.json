@@ -2,5 +2,10 @@
     "lectures": [
         "Transforms (cont.)",
         "Texture Mapping and Pipeline"
+    ],
+    "topics": [
+        "Sampling",
+        "Transforms",
+        "Texture Mapping"
     ]
 }

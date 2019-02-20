@@ -2,5 +2,9 @@
     "lectures": [
         "Geometry",
         "Bezier Curves and Surfaces, Mesh Representations"
+    ],
+    "topics": [
+        "Splines",
+        "Curves"
     ]
 }
