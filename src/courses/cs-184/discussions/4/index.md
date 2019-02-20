@@ -28,13 +28,13 @@
 - Geometry processing
     - Subdivision surface
         - Loop subdivision
-            - Procedure
+            - Procedure: https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/thesis-10.pdf
                 - Quadrosplit triangles
                 - Assign new vertex positions (different weighting for old & new vertices)
             - Continuity
         - Catmull-Clark
             - Extraordinary vertex: valency != 4
-            - Procedure
+            - Procedure: [doi:10.1016/0010-4485(78)90110-0](https://doi.org/10.1016%2F0010-4485%2878%2990110-0)
                 - Summary
                     - Add vertex in each face
                     - Add midpoint on each edge
@@ -50,7 +50,6 @@
     - Plane equation
         - Distance from origin to plane?
     - Ray-plane intersection
-        -
     - Ray-triangle intersectioon
         - Möller Trumbone Algorithm
     - Ray-sphere intersection
