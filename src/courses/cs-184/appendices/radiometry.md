@@ -341,6 +341,8 @@ $$E = \frac{d\Phi}{dA}$$
 
 Radiant flux per unit <del>projected</del> area.
 
+**Unit:** Watt per square meter $[W * m^{−2}]$
+
 > Radiant flux received by a surface per unit area.[^1]
 
 ### Radiance $L_\Omega$
