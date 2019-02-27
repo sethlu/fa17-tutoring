@@ -159,7 +159,7 @@ Arc length ($s$) over radius ($r$).
 
 $$\omega = \frac{A}{r^2}$$
 
-Area subtended $A$ over squared radius ($r^2$).
+Area subtended ($A$) over squared radius ($r^2$).
 
 ### $(\theta, \phi)$-parameterization
 
