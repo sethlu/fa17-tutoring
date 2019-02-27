@@ -307,15 +307,15 @@ Area subtended $A$ over squared radius ($r^2$).
 
 $$dA = r^2 \sin(\theta) d\theta d\phi$$
 
-$$d\omega = \frac{dA}{r^2}$$
+$$d\omega = \frac{dA}{r^2} = \sin(\theta) d\theta d\phi$$
 
 ## Radiation
 
-### Radient energy $Q$
+### Radiant energy $Q$
 
 Energy of electromagnet radiation.
 
-### Radient flux $\Phi$
+### Radiant flux $\Phi$
 
 $$\Phi = \frac{dQ}{dt}$$
 
@@ -325,11 +325,11 @@ Energy per unit time.
 
 > Radiant energy emitted, reflected, transmitted or received, per unit time. This is sometimes also called "radiant power".[^1]
 
-### Radient intensity $I_\Omega$
+### Radiant intensity $I_\Omega$
 
 $$I_\Omega = \frac{d\Phi}{d\omega}$$
 
-Radient flux per unit solid angle.
+Radiant flux per unit solid angle.
 
 **Unit:** Watt per steradian $[W * sr^{-1}]$
 
@@ -339,7 +339,7 @@ Radient flux per unit solid angle.
 
 $$E = \frac{d\Phi}{dA}$$
 
-Radient flux per unit <del>projected</del> area.
+Radiant flux per unit <del>projected</del> area.
 
 > Radiant flux received by a surface per unit area.[^1]
 
@@ -347,7 +347,7 @@ Radient flux per unit <del>projected</del> area.
 
 $$L_\Omega = \frac{d^2 \Phi}{d\omega dA \cos(\theta)}$$
 
-Radient flux per unit solid angle per unit **projected** area.
+Radiant flux per unit solid angle per unit **projected** area.
 
 **Unit:** Watt per steradian per square meter $[W * sr^{-1} * m^{−2}]$
 
