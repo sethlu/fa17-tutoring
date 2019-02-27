@@ -335,7 +335,7 @@ Radiant flux per unit solid angle.
 
 > Radiant flux emitted, reflected, transmitted or received, per unit solid angle. This is a directional quantity.[^1]
 
-### Irradience $E$
+### Irradiance $E$
 
 $$E = \frac{d\Phi}{dA}$$
 
@@ -343,7 +343,7 @@ Radiant flux per unit <del>projected</del> area.
 
 > Radiant flux received by a surface per unit area.[^1]
 
-### Radience $L_\Omega$
+### Radiance $L_\Omega$
 
 $$L_\Omega = \frac{d^2 \Phi}{d\omega dA \cos(\theta)}$$
 
@@ -353,7 +353,7 @@ Radiant flux per unit solid angle per unit **projected** area.
 
 > Radiant flux emitted, reflected, transmitted or received by a surface, per unit solid angle per unit projected area. This is a directional quantity. This is sometimes also confusingly called "intensity".[^1]
 
-#### Relating incoming radience & irradience
+#### Relating incoming radiance & irradiance
 
 {.raw}
 
