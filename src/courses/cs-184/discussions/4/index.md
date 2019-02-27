@@ -50,10 +50,10 @@
     - Plane equation
         - Distance from origin to plane?
     - Ray-plane intersection
-    - Ray-triangle intersectioon
+    - Ray-triangle intersectioon (moved to discussion 5)
         - Möller Trumbone Algorithm
-    - Ray-sphere intersection
-    - Ray intersection with implicit surfaces
+    - Ray-sphere intersection (skipped)
+    - Ray intersection with implicit surfaces (skipped)
 
 ---
 
