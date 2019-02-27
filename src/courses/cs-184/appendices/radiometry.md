@@ -309,6 +309,21 @@ $$dA = r^2 \sin(\theta) d\theta d\phi$$
 
 $$d\omega = \frac{dA}{r^2} = \sin(\theta) d\theta d\phi$$
 
+#### Sphere surface area
+
+{.raw}
+
+\begin{align}
+A & = \int_{\phi = 0}^{2 \pi} \int_{\theta = 0}^{\pi} r^2 \sin(\theta) d\theta d\phi \\
+& = r^2 \int_{\phi = 0}^{2 \pi} \int_{\theta = 0}^{\pi} \sin(\theta) d\theta d\phi \\
+& = r^2 \int_{\phi = 0}^{2 \pi} [-\cos(\theta)]_{0}^{\pi} d\phi \\
+& = r^2 \int_{\phi = 0}^{2 \pi} [-\cos(\pi) + \cos(0)] d\phi \\
+& = r^2 \int_{\phi = 0}^{2 \pi} 2 d\phi \\
+& = r^2 (4 \pi) = 4 \pi r^2
+\end{align}
+
+{./raw}
+
 ## Radiation
 
 ### Radiant energy $Q$
