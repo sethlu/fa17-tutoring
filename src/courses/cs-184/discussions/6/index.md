@@ -13,6 +13,7 @@
 - Draw samples from desired distribution
     - Inverse CDF
     - Draw uniform samples from circle
+
 ---
 
 🖍 Board work for everything
