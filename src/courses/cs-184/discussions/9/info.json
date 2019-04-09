@@ -2,5 +2,9 @@
     "lectures": [
         "Simulation (cont.), Kinematics and Motion Capture",
         "Color"
+    ],
+    "topics": [
+        "Cameras",
+        "Light Fields"
     ]
 }

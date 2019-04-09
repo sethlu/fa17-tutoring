@@ -2,5 +2,9 @@
     "lectures": [
         "Global Illumination (cont.) and Path Tracing",
         "Material Modeling"
+    ],
+    "topics": [
+        "Probability",
+        "Monte Carlo Integration"
     ]
 }

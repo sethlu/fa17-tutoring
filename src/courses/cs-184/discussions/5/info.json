@@ -2,5 +2,9 @@
     "lectures": [
         "Ray Tracing (cont.), Radiometry and Photometry",
         "Monte Carlo and Global Illumination"
+    ],
+    "topics": [
+        "Ray Tracing",
+        "Radiometry"
     ]
 }

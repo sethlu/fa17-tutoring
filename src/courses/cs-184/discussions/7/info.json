@@ -2,5 +2,9 @@
     "lectures": [
         "Advanced Material Modeling",
         "Cameras and Lenses"
+    ],
+    "topics": [
+        "Path Tracing",
+        "Review"
     ]
 }
