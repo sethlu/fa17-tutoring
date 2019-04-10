@@ -33,6 +33,11 @@
 
 🖍 Board work for pretty much everything today
 
+<figure>
+    <img class="slim-border" src="{.link* 0226.jpg}">
+    <figcaption>Board work at the end of section</figcaption>
+</figure>
+
 {./let}
 
 {.include ../../../../template-sp19/v1.md}
